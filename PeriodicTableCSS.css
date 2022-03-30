@@ -1,0 +1,157 @@
+body {
+	padding: 10px 25px;
+	background-color: #181818;
+}
+
+table {
+	border-collapse: collapse;
+	cursor: default;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#title {
+	text-align: center;
+	font-family: Arial Black, Arial;
+	font-size: 50px;
+	color: white;
+}
+
+.Staircase {
+	border-width: 1px 1px 3px 3px;
+    border-style: solid;
+    border-color: black black red red;
+	text-align: center;
+}
+
+.Staircase, .Element:not(.other),
+.ElemRange {
+	transition: all 0.25s ease-in-out;
+}
+
+.Staircase:hover, .Element:hover,
+.ElemRange:hover {
+	transform: scale(1.5);
+	border: 1px solid black;
+	min-height: 95px;
+	min-width: 95px;
+	display: block;
+	position: absolute;
+	z-index: 100;
+	opacity: 1;
+	box-shadow: 5px 5px 15px white;
+}
+
+.Element:hover > div > *,
+.Staircase:hover > div > *,
+.ElemRange:hover > .atomicNumRange {
+	opacity: 1;
+	transform: scaleY(1);
+	transition: opacity 0.25s ease-in,
+	            transform 0.25s ease-in;
+}
+
+.atomicNumber, .atomicMass,
+.name, .atomicNumRange {
+	opacity: 0;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: opacity 0.25s ease-out,
+	            transform 0.25s ease-out;
+}
+
+.Staircase, .Element:not(.other) {
+	color: white;
+}
+
+.Element, .ElemRange {
+	border: 1px solid black;
+}
+
+.Element {
+	height: 95px;
+	width: 95px;
+	text-align: center;
+}
+
+.ElemRange {
+	font-family: Arial Black, Arial;
+	font-size: 20px;
+	background-color: #0000AA;
+}
+
+.emptyRow {
+	height: 75px;
+}
+
+.atom {
+	font-family: Arial Black, Arial;
+	font-size: 30px;
+}
+
+.atomicNumber {
+	color: red;
+	font-weight: 700;
+}
+
+.atomicNumber, .name, .atomicMass {
+	font-family: Arial;
+}
+
+.Alkali {
+	background: linear-gradient(#6C3B01, #2e1901);
+}
+
+.AlkaliEarth {
+	background: linear-gradient(#846011, #302306);
+}
+
+.Lanthanoid {
+	background: linear-gradient(#402C17, #20160c);
+}
+
+.Actinoid {
+	background: linear-gradient(#732E4C, #3c1828);
+}
+
+.Transition {
+	background: linear-gradient(#711019, #34070c);
+}
+
+.PostTransition {
+	background: linear-gradient(#003666, #011a30);
+}
+
+.Metalloid {
+	background: linear-gradient(#015146, #012e28);
+}
+
+.Reactive {
+	background: linear-gradient(#3E6418, #21340d);
+}
+
+.NobleGas {
+	background: linear-gradient(#3A2151, #20122c);
+}
+
+.other {
+	background: linear-gradient(#222222, #0c0c0c);
+	color: #7F807B;
+	transition: transform 0.3s linear;
+}
+
+#labels {
+	width: fit-content;
+}
+
+#labels > div {
+	padding: 1px 0 1px 10px;
+}
+
+#colorKey > div {
+	height: 20px;
+}
+
+/*.other:hover {
+	transform: 
+}*/
